@@ -1,6 +1,8 @@
 Authors: Thomas Gehrmann, Petr Jakubčík, Andreas von Manteuffel, Cesare Carlo Mella, Lorenzo Tancredi
 
 
+Equation numbers, references to tables and to the supplementary material relates to the companion paper 
+
 # zgqq: full-colour finite remainders through 3 loops in QCD for vector boson plus three partons system V q̄ q g
 
 A C++ library that evaluates the **finite remainders, 0 to 3 loops, of the helicity amplitude for
@@ -8,14 +10,14 @@ V(p₄) q̄(p₁) q(p₂) g(p₃) in full colour**, as the scalar coefficients �
 
     M_{L+L} = [13] / (√2 p₄⁴ y z) · ( ω₁ ⟨25⟩²[23][56] + ω₂p₄² ⟨25⟩[36] + ω₃ ⟨12⟩[13]⟨53⟩[36] ),
 
-in the decay region and in the three production regions. Every point gives the ω of M = M_{L+L} and of σ₁₂M (next
+in the decay region and in the three production regions, see eq. (5). Every point gives the ω of M = M_{L+L} and of σ₁₂M (next
 section).
 
 The dimensionless invariants x, y, z are defined as
 
     x = s₁₂/p₄²,   y = s₁₃/p₄²,   z = s₂₃/p₄²,   with s_ij = (p_i + p_j)² and p₄² = (p₁ + p₂ + p₃)²,
 
-so that x + y + z = 1. In the decay all three lie in (0, 1); in a production region one of them is larger than 1 and
+so that x + y + z = 1, see eq. (2). In the decay all three lie in (0, 1); in a production region one of them is larger than 1 and
 the other two are negative (section Choosing points).
 
 The differential equations are solved with the method presented in arXiv:2606.30354.
@@ -28,23 +30,23 @@ The differential equations are solved with the method presented in arXiv:2606.30
       M = Z⁻¹ M_ren,
 
   in the MS-bar scheme at the scale μ² = p₄².
-- **Expansion in α_s/2π.** With the MS-bar coupling α_s = α_s(μ²) at μ² = p₄²,
+- **Expansion in α_s/2π.** With the MS-bar coupling α_s = α_s(μ²) at μ² = p₄², eq. (6)
 
-      M = Σ_L (α_s/2π)^L M^(L),   L = 0, 1, 2, 3,
+      M = Σ_L (α_s/2π)^L M^(L),   L = 0, 1, 2, 3, 
 
   and the program gives the ω of each M^(L): the values of loop L are the coefficient of (α_s/2π)^L.
 - **Normalisation.** At tree level ω = (1, 0, 0), for M and for σ₁₂M.
-- **Colour.** At each loop, every ω is a sum of colour layers,
+- **Colour.** At each loop, every ω is a sum of colour layers
 
       ω^(L) = Σ Nc^a Nf^b NfZ^c ω^(L)_abc,
 
-  with 1, 2, 7 and 14 layers at 0, 1, 2 and 3 loops. Nc is the number of colours and Nf the number of light quark
+  with 1, 2, 7 and 14 layers at 0, 1, 2 and 3 loops, see table I. Nc is the number of colours and Nf the number of light quark
   flavours; NfZ multiplies the contributions in which V couples to a closed quark loop (see arXiv:2306.10170). The
   program gives each layer separately; with `Nc`, `Nf`, `NfZ` in the input card it also gives their sums.
 
 ## Helicities
 
-All helicity amplitudes follow from M = M_{L+L} (quark L, gluon +, e⁺_L e⁻_R):
+All helicity amplitudes follow from M = M_{L+L} (quark L, gluon +, e⁺_L e⁻_R), see supplementary material:
 
 | (q, g) | e⁺_L e⁻_R | e⁺_R e⁻_L |
 |---|---|---|
