@@ -1,3 +1,6 @@
+Authors: Thomas Gehrmann, Petr Jakubčík, Andreas von Manteuffel, Cesare Carlo Mella, Lorenzo Tancredi
+
+
 # zgqq: full-colour finite remainders through 3 loops in QCD for vector boson plus three partons system V q̄ q g
 
 A C++ library that evaluates the **finite remainders, 0 to 3 loops, of the helicity amplitude for
