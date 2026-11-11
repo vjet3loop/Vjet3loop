@@ -1,0 +1,17 @@
+# zgqq input card: run with   ./zgqq examples/input.txt [output.txt]   (results by default into zgqq_output.txt)
+# all keywords, how to choose points and the output format: README.md, section Run
+# Only "points" is needed. Each comment starts with the default: the value used when the line is left out.
+data       data             # default: data. Folder of the input files (shipped with the package)
+precision  recommended      # default: recommended. Or double, quad
+errors     auto             # default: auto (an estimate where the procedure makes one). Or all, none
+tol        1e-10 1e-16      # default: 1e-10 1e-16. Integration tolerances in double and in quad
+switch     3.2 43.8657      # default: 3.2 43.8657. Switch region: |eta*| > 3.2 or sqrt(shat/p4^2) > 43.8657 (4 TeV for p4^2 = M_Z^2)
+criteria   1e-6 1e-2        # default: 1e-6 1e-2. In the switch region: quad if error / largest value > 1e-6 or error / value > 1e-2
+Nc         3                # default: off. All three of Nc, Nf, NfZ together: also each coefficient and loop summed
+Nf         5                #   over the colour layers Nc^a*Nf^b*NfZ^c
+NfZ        1
+points                      # one point per line: x y, with x = s12/p4^2, y = s13/p4^2 (z = 1 - x - y)
+0.2 0.3                     # decay V -> qbar q g          (z = 0.5)
+2.5 -0.5                    # q qbar -> V g, x > 1         (z = -1)
+-0.6 1.9                    # q g -> V q, y > 1            (z = -0.3)
+-0.5 -0.25                  # qbar g -> V qbar, z > 1      (z = 1.75)

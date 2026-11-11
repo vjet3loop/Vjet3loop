@@ -1,0 +1,13 @@
+# build products
+/zgqq
+/libzgqq.a
+/src/*.o
+/tests/*.o
+/tests/test
+# output of runs and of make dist
+/zgqq_output.txt
+/zgqq-*/
+/zgqq-*.tar.gz
+# macOS Finder files
+.DS_Store
+._*
